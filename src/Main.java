@@ -14,9 +14,9 @@ class UseCase5PalindromeCheckerApp {
             reversed = reversed + stack.pop();
         }
         if (input.equals(reversed)) {
-            System.out.println("It is a Palindrome.");
+            System.out.println("It is a Palindrome. ");
         } else {
-            System.out.println("It is NOT a Palindrome.");
+            System.out.println("It is NOT a Palindrome. ");
         }
         scanner.close();
     }
