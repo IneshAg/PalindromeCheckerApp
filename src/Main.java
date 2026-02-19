@@ -11,7 +11,7 @@ class UseCase2PalindromeCheckerApp {
         }
 
         if (word.equals(reversed)) {
-            System.out.println(word + " is a Palindrome.");
+            System.out.println(word + " is a Palindrome .");
         } else {
             System.out.println(word + " is not a Palindrome.");
         }
