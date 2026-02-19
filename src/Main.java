@@ -1,19 +1,19 @@
-class UseCase2PalindromeCheckerApp {
-
+import java.util.Scanner;
+class UseCase3PalindromeCheckerApp {
     public static void main(String[] args) {
-
-        String word = "madam";
-
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String original = scanner.nextLine();
+        int length = original.length();
         String reversed = "";
-
-        for (int i = word.length() - 1; i >= 0; i--) {
-            reversed = reversed + word.charAt(i);
+        for (int i = length - 1; i >= 0; i--) {
+            reversed = reversed + original.charAt(i);
         }
-
-        if (word.equals(reversed)) {
-            System.out.println(word + " is a Palindrome .");
+        if (original.equals(reversed)) {
+            System.out.println("It is a Palindrome.");
         } else {
-            System.out.println(word + " is not a Palindrome.");
+            System.out.println("It is NOT a Palindrome.");
         }
+        scanner.close();
     }
 }
