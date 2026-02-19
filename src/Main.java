@@ -1,15 +1,19 @@
 import java.util.Scanner;
-class UseCase4PalindromeCheckerApp {
+import java.util.Stack;
+class UseCase5PalindromeCheckerApp {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a string: ");
-        String original = scanner.nextLine();
-        int length = original.length();
-        String reversed = "";
-        for (int i = length - 1; i >= 0; i--) {
-            reversed = reversed + original.charAt(i);
+        String input = scanner.nextLine();
+        Stack<Character> stack = new Stack<>();
+        for (int i = 0; i < input.length(); i++) {
+            stack.push(input.charAt(i));
         }
-        if (original.equals(reversed)) {
+        String reversed = "";
+        while (!stack.isEmpty()) {
+            reversed = reversed + stack.pop();
+        }
+        if (input.equals(reversed)) {
             System.out.println("It is a Palindrome.");
         } else {
             System.out.println("It is NOT a Palindrome.");
