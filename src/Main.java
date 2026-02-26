@@ -24,6 +24,6 @@ import java.util.Deque;
             }
         }
 
-        System.out.println("Input : " + input);
+        System.out.println("Input :  " + input );
         System.out.println("Is Palindrome? : " + isPalindrome);
     }
